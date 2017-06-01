@@ -12,13 +12,16 @@
     </head>
 
     <body>
-        <div class="texto" id="uploader" onclick="$('#filePhoto').click()">
-            <br><br>
-            <center>Clique ou arraste aqui suas imagens para visualização</center>
-            <img src=""/>
+        <div>
+            <!-- <input type="button" onclick="mostrar();"> -->
+            <div class="texto" id="uploader" contenteditable="true" style="visibility: visible;">
+                <!-- <br><br>
+                <center>Clique ou arraste aqui suas imagens para visualização</center> -->
+              
+            </div>
+            
+            <input type="file" name="userprofile_picture"  id="filePhoto" />
+            <script src="./filepicker.js"></script>
         </div>
-        <input type="file" name="userprofile_picture"  id="filePhoto" />
-        <script src="./filepicker.js"></script>
-    
     </body>
 </html>

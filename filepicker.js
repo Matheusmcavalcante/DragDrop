@@ -3,8 +3,11 @@ var imageLoader = document.getElementById('filePhoto');
 
 function handleImage(e) {
     var reader = new FileReader();
+    console.log('lida');
     reader.onload = function (event) {
-        $('#uploader img').attr('src',event.target.result);
+        // $('#uploader img').attr('src',event.target.result);
+        var img = "<img src='"+ event.target.result+"' >";
+        $("#uploader").append(img);
     }
     reader.readAsDataURL(e.target.files[0]);
     
@@ -36,4 +39,19 @@ function drop(e) {
   
   //Esta linha de código dispara a função 'handleImage' (evento de mudança imageLoader)
   imageLoader.files = files;
+}
+
+  var boolean=false;
+function mostrar(){
+
+  if(!boolean){
+$("#uploader").css("visibility", "visible")
+    boolean=true;
+
+  }
+  else{
+  $("#uploader").css("visibility", "hidden");
+  boolean=false;
+  }    
+  
 }
